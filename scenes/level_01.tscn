@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcky7rhrvakkp"]
+
+[ext_resource type="Script" path="res://scripts/level_01.gd" id="1_mwbt8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fw5xr"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="Level 01" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.686275, 1, 1, 1)
+script = ExtResource("1_mwbt8")
+
+[node name="Level Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "LEVEL 1"
+label_settings = SubResource("LabelSettings_fw5xr")
+horizontal_alignment = 1
+
+[node name="Level 1 Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -76.0
+offset_right = 104.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Switch Level
+"
+
+[node name="Level 1 Button 2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -2.0
+offset_right = 104.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Shrink Transition
+"
+
+[node name="Level 1 Button 3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 72.0
+offset_right = 104.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Black Fade Transition
+"
+
+[connection signal="pressed" from="Level 1 Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Level 1 Button 2" to="." method="_on_level_1_button_2_pressed"]
+[connection signal="pressed" from="Level 1 Button 3" to="." method="_on_level_1_button_3_pressed"]
